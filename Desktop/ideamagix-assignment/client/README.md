@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Lecture Scheduling Module – Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend application for the Lecture Scheduling Module.  
+It provides an Admin Panel and Instructor Panel to manage and view lecture schedules.
 
-## Available Scripts
+## Live Application
+Frontend (Netlify):  
+https://lecture-scheduling-frontend.netlify.app
 
-In the project directory, you can run:
+Backend API (Render):  
+https://lecture-scheduling-backend-cj8a.onrender.com
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Login Credentials
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Admin Login
+Email: admin1@gmail.com  
+Password: 123456  
 
-### `npm test`
+### Instructor Login
+Email: rahul@gmail.com  
+Password: 123456  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Admin Panel
+- View list of instructors
+- Add new courses
+- Add multiple lectures (batches) to a course
+- Assign lectures to instructors with a date
+- Prevent instructor from being assigned multiple lectures on the same date
+- View all scheduled lectures
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Instructor Panel
+- Login as instructor
+- View assigned lectures
+- See course name and lecture date
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Tech Stack
+- React.js
+- Axios
+- CSS (custom styling)
+- Netlify (hosting)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Validations & Rules
+- An instructor cannot be assigned more than one lecture on the same date
+- Backend ensures no date clash during lecture assignment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Nice-to-Have Implemented
+- Empty state message when no lectures are available
+- Clean UI with reusable components
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Screen Recording
+A screen recording of the working project is shared separately via Google Drive with open access.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Run Project Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm install
+npm start
