@@ -1,0 +1,333 @@
+/* ======================
+   COLOR VARIABLES
+====================== */
+:root {
+  --bg-main: #f5f7fb;
+  --bg-card: #ffffff;
+  --primary: #2563eb;
+  --primary-light: #dbeafe;
+  --secondary: #0f172a;
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --border-light: #e5e7eb;
+
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --info: #0ea5e9;
+  --danger: #dc2626;
+}
+
+/* ======================
+   GLOBAL RESET
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  color: var(--text-dark);
+}
+
+/* ======================
+   NAVBAR
+====================== */
+.navbar {
+  height: 64px;
+  background: linear-gradient(90deg, #0f172a, #1e3a8a);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.navbar h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.navbar a,
+.navbar button {
+  color: #c7d2fe;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar a:hover,
+.navbar button:hover {
+  color: #ffffff;
+}
+
+/* ======================
+   PAGE CONTAINER
+====================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+/* ======================
+   HEADINGS
+====================== */
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 20px;
+  margin: 32px 0 16px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+/* ======================
+   ASSIGN FORM (ADMIN)
+====================== */
+.assign-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: 14px;
+  border-left: 6px solid var(--primary);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+  margin-bottom: 32px;
+}
+
+.assign-form select,
+.assign-form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  font-size: 14px;
+}
+
+.assign-form select:focus,
+.assign-form input:focus {
+  border-color: var(--primary);
+}
+
+.assign-form button {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.assign-form button:hover {
+  background: linear-gradient(135deg, #1e40af, #1e3a8a);
+}
+
+/* ======================
+   GRID
+====================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ======================
+   CARD
+====================== */
+.card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 20px;
+  min-height: 160px;
+  border-top: 4px solid var(--info);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card small {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 8px 0 12px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 14px;
+  color: #475569;
+}
+
+/* ======================
+   STATUS COLOR HELPERS
+====================== */
+.status-success {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.status-warning {
+  color: var(--warning);
+  font-weight: 600;
+}
+
+.status-info {
+  color: var(--info);
+  font-weight: 600;
+}
+
+.status-danger {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+/* ======================
+   EMPTY STATE
+====================== */
+.empty {
+  color: var(--text-muted);
+  margin-top: 20px;
+}
+
+/* ======================
+   LOGIN PAGE
+====================== */
+.login-wrapper {
+  max-width: 420px;
+  margin: 100px auto;
+  background: var(--bg-card);
+  padding: 36px;
+  border-radius: 18px;
+  border-top: 6px solid var(--primary);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.12);
+}
+
+.login-wrapper h2 {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.login-wrapper input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  margin-bottom: 16px;
+}
+
+.login-wrapper input:focus {
+  border-color: var(--primary);
+}
+
+.login-wrapper button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-wrapper button:hover {
+  background: linear-gradient(135deg, #1e40af, #1e3a8a);
+}
+/* ======================
+   LECTURE CARD EXTRAS
+====================== */
+
+.lecture-card {
+  position: relative;
+}
+
+/* Badge on card */
+.lecture-badge {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  background: linear-gradient(135deg, var(--info), #38bdf8);
+  color: white;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(14, 165, 233, 0.35);
+}
+
+/* Lecture title */
+.lecture-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--secondary);
+}
+
+/* Lecture meta text */
+.lecture-meta {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+/* ======================
+   DELETE BUTTON (ADMIN)
+====================== */
+
+.delete-btn {
+  margin-top: 14px;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #b91c1c, #991b1b);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.35);
+}
+
+.delete-btn:active {
+  transform: scale(0.98);
+}
+
+/* ======================
+   ERROR & SUCCESS TEXT
+====================== */
+
+.error {
+  margin-top: 12px;
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.success {
+  margin-top: 12px;
+  color: var(--success);
+  font-weight: 600;
+}
